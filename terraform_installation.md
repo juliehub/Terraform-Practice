@@ -15,34 +15,14 @@ Saving to: ‘terraform_0.12.29_linux_amd64.zip’
 
 2020-08-01 12:18:27 (102 MB/s) - ‘terraform_0.12.29_linux_amd64.zip’ saved [28424050/28424050]
 ```
-2. Unzip the package and move it to `downloads` folder
+2. Unzip the package and move it to `/usr/local/bin` folder
 ```python
 [ec2-user@ip-172-31-1-74 ~]$ unzip terraform_0.12.29_linux_amd64.zip
 Archive:  terraform_0.12.29_linux_amd64.zip
   inflating: terraform
-[ec2-user@ip-172-31-1-74 ~]$ mkdir downloads
+[ec2-user@ip-172-31-1-74 downloads]$ sudo mv terraform /usr/local/bin/
 ```
-3. Update PATH
-```python
-[ec2-user@ip-172-31-1-74 ~]$ source ~/.bash_profile
-[ec2-user@ip-172-31-1-74 ~]$ cat ~/.bash_profile
-# .bash_profile
-
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
-fi
-
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/downloads
-
-export PATH
-[ec2-user@ip-172-31-1-74 ~]$ source ~/.bash_profile
-[ec2-user@ip-172-31-1-74 ~]$ echo $PATH
-/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/downloads
-```
-4. Verify the installation
+3. Verify the installation
 Verify that the installation worked by opening a new terminal session and listing Terraform's available subcommands.
 ```python
 [ec2-user@ip-172-31-1-74 ~]$ terraform --version
@@ -71,7 +51,7 @@ Options:
   -destroy            If set, a plan will be generated to destroy all resources
                       managed by the given configuration and state.
 ```
-5. Enable tab completion
+4. Enable tab completion
 If you use either bash or zsh you can enable tab completion for Terraform commands. To enable autocomplete, run the following command and then restart your shell.
 ```python
 [ec2-user@ip-172-31-1-74 ~]$ terraform -install-autocomplete
