@@ -1,3 +1,5 @@
+[Documentation](https://learn.hashicorp.com/terraform/getting-started/build) 
+
 1. Setup AWS credentials in the file `~/.aws/credentials`
 ```python
 [default]
