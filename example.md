@@ -1,24 +1,24 @@
 [Documentation](https://learn.hashicorp.com/terraform/getting-started/build) 
 
-### Setup AWS credentials in the file `~/.aws/credentials`
+#### Step 1: Setup AWS credentials in the file `~/.aws/credentials`
 ```python
 [default]
 aws_access_key_id = your_access_key_id
 aws_secret_access_key = your_secret_access_key
 ```
-### Configure AWS region in the file `~/.aws/config`
+#### Step 2: Configure AWS region in the file `~/.aws/config`
 ```python
 [default]
 region = your_aws_region
 ```
 [More details on AWS configure](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/setup-credentials.html)
 
-### Prepare [example.tf](https://github.com/juliehub/Terraform-Practice/blob/master/example.tf).
+#### Step 3: Prepare [example.tf](https://github.com/juliehub/Terraform-Practice/blob/master/example.tf).
 ```python
 $ mkdir -p /home/ec2-user/terraform-project/project1
 $ vi example.tf
 ```
-### Initialize terraform
+#### Step 4: Initialize terraform
 ```python
 [ec2-user@ip-172-31-1-74 project1]$ terraform init
 
@@ -48,7 +48,7 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
-### Format and validate the configuration
+#### Step 5: Format and validate the configuration
 1. Updates configurations in the current directory for easy readability and consistency
 ```python
 [ec2-user@ip-172-31-1-74 project1]$ terraform fmt
@@ -58,7 +58,7 @@ commands will detect it and remind you to do so if necessary.
 [ec2-user@ip-172-31-1-74 project1]$ terraform validate
 Success! The configuration is valid.
 ```
-### Create infrastructure
+#### Step 6: Create infrastructure
 ```python
 [ec2-user@ip-172-31-1-74 project1]$ terraform apply
 
@@ -222,7 +222,7 @@ resource "aws_instance" "example" {
     }
 }
 ```
-### Manually Managing State
+#### Step 7: Manually Managing State
 ```python
 [ec2-user@ip-172-31-1-74 project1]$ terraform state list
 aws_instance.example
