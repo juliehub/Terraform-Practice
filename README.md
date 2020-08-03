@@ -10,4 +10,14 @@ Optional: Install Visual Studio Code (install Terraform extension by HashiCorp f
 ### Step 2: Getting Started
 Follow the steps to create our first EC2 instance [example.md](https://github.com/juliehub/Terraform-Practice/blob/master/example.md).
 
-### Step 3:
+### Step 3: Create Resource Dependencies
+Assign an [Elastic IP](https://github.com/juliehub/Terraform-Practice/blob/master/example_elastic_ip.md) for EC2 instance.
+
+### Step 4:
+
+### Step 5: Destroy Infrastructure
+This command is the reverse of terraform apply in that it terminates all the resources specified by the configuration. 
+It does not destroy resources running elsewhere that are not described in the current configuration.
+```python
+$ terraform destroy
+```
