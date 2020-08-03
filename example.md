@@ -149,7 +149,7 @@ Do you want to perform these actions?
   Only 'yes' will be accepted to approve.
   Enter a value: 
 ```
-Type yes at the confirmation prompt to proceed.
+Type `yes` at the confirmation prompt to proceed.
 ```python
 
   Enter a value: yes
@@ -163,6 +163,7 @@ aws_instance.example: Creation complete after 31s [id=i-0adff03b788911557]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 *** Inspect state
+When you applied your configuration, Terraform wrote data into a file called `terraform.tfstate`. This file now contains the IDs and properties of the resources Terraform created so that it can manage or destroy those resources going forward.
 ```python
 [ec2-user@ip-172-31-1-74 project1]$ terraform show
 # aws_instance.example:
@@ -220,4 +221,9 @@ resource "aws_instance" "example" {
         volume_type           = "gp2"
     }
 }
+```
+### Manually Managing State
+```python
+[ec2-user@ip-172-31-1-74 project1]$ terraform state list
+aws_instance.example
 ```
