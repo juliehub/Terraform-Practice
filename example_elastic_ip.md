@@ -43,6 +43,11 @@ Do you want to perform these actions?
   Terraform will perform the actions described above.
   Only 'yes' will be accepted to approve.
 
-  Enter a value:
+  Enter a value: yes
 
+aws_eip.ip: Creating...
+aws_eip.ip: Creation complete after 1s [id=eipalloc-015382676c6b2006f]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
+
