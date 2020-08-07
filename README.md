@@ -13,7 +13,8 @@ Follow the steps to create our first EC2 instance [example.md](https://github.co
 ### Step 3: Create Resource Dependencies
 Assign an [Elastic IP](https://github.com/juliehub/Terraform-Practice/blob/master/example_elastic_ip.md) for EC2 instance.
 
-### Step 4:
+### Step 4: Provision Infrastructure
+Create an ssh key with no passphrase, upload to EC2 instance. Then, install, update, and start nginx on remote host. See the  [steps](https://github.com/juliehub/Terraform-Practice/blob/master/provision_ec2.md).
 
 ### Step 5: Destroy Infrastructure
 This command is the reverse of terraform apply in that it terminates all the resources specified by the configuration. 
