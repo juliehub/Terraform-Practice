@@ -1,4 +1,4 @@
-#### local-exec Provisioner
+### local-exec Provisioner
 To define a provisioner, modify the resource block defining the "example" EC2 instance to look like the following:
 ```python
 resource "aws_instance" "example" {
@@ -29,3 +29,4 @@ Update the permissions of that key
 ```python
 [ec2-user@ip-172-31-1-74 project1]$ ls -l ~/.ssh/terraform*
 ```
+Update the terraform file [example_provisioner.tf](https://github.com/juliehub/Terraform-Practice/blob/master/example_provisioner.tf)
