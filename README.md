@@ -5,7 +5,7 @@ This repository contains practice intructions to manage AWS resources using Terr
 
 Follow the [installion guide](https://github.com/juliehub/Terraform-Practice/blob/master/terraform_installation.md) to install Terraform on Linux.
 
-Optional: Install Visual Studio Code (install Terraform extension by HashiCorp for Syntax highlighting and autocompletion for Terraform) or Sublime Text Editor!
+Optional: Install `Visual Studio Code` (install Terraform extension by HashiCorp for Syntax highlighting and autocompletion for Terraform) or `Sublime Text Editor`!
 
 ### Step 2: Getting Started
 Follow the steps to create our first EC2 instance [example.md](https://github.com/juliehub/Terraform-Practice/blob/master/example.md).
@@ -14,7 +14,7 @@ Follow the steps to create our first EC2 instance [example.md](https://github.co
 Assign an [Elastic IP](https://github.com/juliehub/Terraform-Practice/blob/master/example_elastic_ip.md) for EC2 instance.
 
 ### Step 4: Provision Infrastructure
-Create an ssh key with no passphrase, upload to EC2 instance. Then, install, update, and start nginx on remote host. See the  [steps](https://github.com/juliehub/Terraform-Practice/blob/master/provision_ec2.md).
+Create an ssh key with no passphrase, upload to EC2 instance. Then, install, update, and start `nginx` on remote host. See the  [steps](https://github.com/juliehub/Terraform-Practice/blob/master/provision_ec2.md).
 
 ### Step 5: Input variables
 Define region and AMI in `terraform.tfvars` file. See the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/input_var_ec2.md).
