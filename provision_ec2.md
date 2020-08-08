@@ -63,4 +63,48 @@ Terraform will perform the following actions:
       + availability_zone            = (known after apply)
       + cpu_core_count               = (known after apply)
       + cpu_threads_per_core         = (known after apply)
+      
+      
+...
+aws_instance.example (remote-exec): Connecting to remote host via SSH...
+aws_instance.example (remote-exec):   Host: 3.24.240.12
+aws_instance.example (remote-exec):   User: ec2-user
+aws_instance.example (remote-exec):   Password: false
+aws_instance.example (remote-exec):   Private key: true
+aws_instance.example (remote-exec):   Certificate: false
+aws_instance.example (remote-exec):   SSH Agent: false
+aws_instance.example (remote-exec):   Checking Host Key: false
+aws_instance.example (remote-exec): Connected!
+aws_instance.example (remote-exec): Topic nginx1.12 has end-of-support date of 2019-09-20
+aws_instance.example (remote-exec):   0  ansible2                 available    \
+aws_instance.example (remote-exec):         [ =2.4.2  =2.4.6  =2.8  =stable ]
+aws_instance.example (remote-exec):   2  httpd_modules            available    [ =1.0  =stable ]
+aws_instance.example (remote-exec):   3  memcached1.5             available    \
+aws_instance.example (remote-exec):         [ =1.5.1  =1.5.16  =1.5.17 ]
+aws_instance.example (remote-exec):   4 *nginx1.12=latest         enabled      [ =1.12.2 ]
+...
+...
+aws_instance.example (remote-exec): ========================================
+aws_instance.example (remote-exec):  Package
+aws_instance.example (remote-exec):     Arch   Version
+aws_instance.example (remote-exec):              Repository            Size
+aws_instance.example (remote-exec): ========================================
+aws_instance.example (remote-exec): Installing:
+aws_instance.example (remote-exec):  nginx
+aws_instance.example (remote-exec):     x86_64 1:1.12.2-2.amzn2.0.2
+aws_instance.example (remote-exec):              amzn2extra-nginx1.12 533 k
+aws_instance.example (remote-exec): Installing for dependencies:
+aws_instance.example (remote-exec):  dejavu-fonts-common
+....
+
+aws_instance.example (remote-exec): Installed:
+aws_instance.example (remote-exec):   nginx.x86_64 1:1.12.2-2.amzn2.0.2
+
+aws_instance.example (remote-exec): Dependency Installed:
+...
+
+aws_instance.example (remote-exec): Complete!
+aws_instance.example: Creation complete after 1m2s [id=i-0382171db4e1010ae]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
 ```
