@@ -1,3 +1,9 @@
+variable "region" {}
+
+variable "amis" {
+  type = "map"
+}
+
 provider "aws" {
   profile    = "default"
   region = var.region
