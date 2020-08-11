@@ -182,7 +182,7 @@ docker_container.nginx: Creation complete after 1s [id=c9e2fda5100a8409bafccf51e
 
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
-13. Verify
+13. Verify the existence of the NGINX container by visiting localhost:8000
 ```python
 @terraform-ins1:~/terraform-docker-demo$ curl -l localhost:8000
 <!DOCTYPE html>
