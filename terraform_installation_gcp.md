@@ -151,5 +151,90 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other                                    
 commands will detect it and remind you to do so if necessary.                       
 ```
+12. Create new resource
+```python
+@terraform-ins1:~/terraform-docker-demo$ terraform apply
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # docker_container.nginx will be created
+  + resource "docker_container" "nginx" {
+      + attach           = false
+      + bridge           = (known after apply)
+      + command          = (known after apply)
+.....
 
 
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+docker_image.nginx: Creating...
+docker_image.nginx: Creation complete after 8s [id=sha256:08393e824c32d456ff69aec72c64d1ab63fecdad060ab0e8d3d42640fc3d64c5nginx:latest]
+docker_container.nginx: Creating...
+docker_container.nginx: Creation complete after 1s [id=c9e2fda5100a8409bafccf51e482175d6c61eec8c8a27a2cb32b250575c368d6]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+```
+13. Verify
+```python
+@terraform-ins1:~/terraform-docker-demo$ curl -l localhost:8000
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+@terraform-ins1:~/terraform-docker-demo$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+c9e2fda5100a        08393e824c32        "/docker-entrypoint.…"   2 minutes ago       Up 2 minutes        0.0.0.0:8000->80/tcp   tutorial
+```
+14. To stop the container, run terraform destroy
+```python
+@terraform-ins1:~/terraform-docker-demo$ terraform destroy
+docker_image.nginx: Refreshing state... [id=sha256:08393e824c32d456ff69aec72c64d1ab63fecdad060ab0e8d3d42640fc3d64c5nginx:latest]
+docker_container.nginx: Refreshing state... [id=c9e2fda5100a8409bafccf51e482175d6c61eec8c8a27a2cb32b250575c368d6]
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # docker_container.nginx will be destroyed
+  - resource "docker_container" "nginx" {
+  
+  Enter a value: yes
+
+docker_container.nginx: Destroying... [id=c9e2fda5100a8409bafccf51e482175d6c61eec8c8a27a2cb32b250575c368d6]
+docker_container.nginx: Destruction complete after 0s
+docker_image.nginx: Destroying... [id=sha256:08393e824c32d456ff69aec72c64d1ab63fecdad060ab0e8d3d42640fc3d64c5nginx:latest]
+docker_image.nginx: Destruction complete after 0s
+
+Destroy complete! Resources: 2 destroyed.
+```
