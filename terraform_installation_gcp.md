@@ -1,6 +1,6 @@
 1. Download terraform 
 ```python
-@terraform-ins1:~/.ssh$ wget https://releases.hashicorp.com/terraform/0.13.0/terraform_0.13.0_linux_amd64.zip
+@terraform-ins1:~$ wget https://releases.hashicorp.com/terraform/0.13.0/terraform_0.13.0_linux_amd64.zip
 --2020-08-11 04:01:56--  https://releases.hashicorp.com/terraform/0.13.0/terraform_0.13.0_linux_amd64.zip
 Resolving releases.hashicorp.com (releases.hashicorp.com)... 151.101.1.183, 151.101.65.183, 151.101.129.183, ...
 Connecting to releases.hashicorp.com (releases.hashicorp.com)|151.101.1.183|:443... connected.
@@ -14,7 +14,7 @@ terraform_0.13.0_linux_amd64 100%[=============================================>
 ```
 2. Download `unzip` package (if needed)
 ```python
-@terraform-ins1:~/.ssh$ sudo apt install unzip
+@terraform-ins1:~$ sudo apt install unzip
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
@@ -25,7 +25,24 @@ The following NEW packages will be installed:
  ```
 3. Unzip terraform
 ```python
-@terraform-ins1:~/.ssh$ unzip terraform_0.13.0_linux_amd64.zip 
+@terraform-ins1:~$ unzip terraform_0.13.0_linux_amd64.zip 
 Archive:  terraform_0.13.0_linux_amd64.zip
   inflating: terraform               
+```
+4. Move the Terraform binary
+```python
+@terraform-ins1:~$ sudo mv terraform /usr/local/bin/
+```
+5. Verify installation
+```python
+terraform-ins1:~$ terraform --version
+Terraform v0.13.0
+```
+6. Enable tab completion
+```python
+@terraform-ins1:~$ terraform --install-autocomplete
+```
+7. Create a directory named `terraform-docker-demo`
+```python
+@terraform-ins1:~$ mkdir terraform-docker-demo && cd $_
 ```
