@@ -182,7 +182,7 @@ docker_container.nginx: Creation complete after 1s [id=c9e2fda5100a8409bafccf51e
 
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 ```
-If you hit permission issue by running Docker using non-root user, you can try `terraform-ins1:~/terraform-docker-demo$ sudo chmod 666 /var/run/docker.sock`
+If you hit permission issue by running Docker using non-root user, you can try `$ sudo chmod 666 /var/run/docker.sock`
 
 13. Verify the existence of the NGINX container by visiting localhost:8000
 ```python
