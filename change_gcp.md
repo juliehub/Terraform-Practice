@@ -1,3 +1,23 @@
+Add a google compute instance resource to main.tf.
+```python
+resource "google_compute_instance" "vm_instance" {
+  name         = "terraform-instance"
+  machine_type = "f1-micro"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+
+  network_interface {
+    network = google_compute_network.vpc_network.name
+    access_config {
+    }
+  }
+}
+```
+Create new resource
 ```python
 @terraform-ins1:~/terraform-docker-demo$ terraform apply
 google_compute_network.vpc_network: Refreshing state... [id=projects/indigo-winter-286100/global/networks/terraform
@@ -69,4 +89,13 @@ google_compute_instance.vm_instance: Still creating... [10s elapsed]
 google_compute_instance.vm_instance: Creation complete after 12s [id=projects/indigo-winter-286100/zones/australia-
 southeast1-b/instances/terraform-instance]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+```
+Add a "tags" argument to your "vm_instance" so that it looks like this:
+```python
+resource "google_compute_instance" "vm_instance" {
+  name         = "terraform-instance"
+  machine_type = "f1-micro"
+  tags         = ["web", "dev"]
+  # ...
+}
 ```
