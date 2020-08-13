@@ -99,3 +99,31 @@ resource "google_compute_instance" "vm_instance" {
   # ...
 }
 ```
+Apply change
+```python
+@terraform-ins1:~/terraform-docker-demo$ terraform apply
+google_compute_network.vpc_network: Refreshing state... [id=projects/indigo-winter-286100/global/networks/terraform-network]
+google_compute_instance.vm_instance: Refreshing state... [id=projects/indigo-winter-286100/zones/australia-southeast1-b/instances/terraform-instance]
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+...
+
+      ~ tags                 = [
+          + "dev",
+          + "web",
+        ]
+        tags_fingerprint     = "42WmSpB8rSM="
+        zone                 = "australia-southeast1-b"
+        
+       Enter a value: yes
+
+google_compute_instance.vm_instance: Modifying... [id=projects/indigo-winter-286100/zones/australia-southeast1-b/instances/terraform-instance]
+google_compute_instance.vm_instance: Still modifying... [id=projects/indigo-winter-286100/zones/aus...theast1-b/instances/terraform-instance, 10s elapsed]
+google_compute_instance.vm_instance: Modifications complete after 10s [id=projects/indigo-winter-286100/zones/australia-southeast1-b/instances/terraform-instance]
+
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+```
