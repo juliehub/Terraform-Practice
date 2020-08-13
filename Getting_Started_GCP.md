@@ -11,7 +11,10 @@ Create a [simple intrastructure](https://github.com/juliehub/Terraform-Practice/
 #### 3. Change Infrastructure:
 Add a new compute instance. See the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/change_gcp.md)
 
-#### 4. Clean up
+#### 4. Create resource dependencies
+Create static IP and assign to new compute instance. [See the steps](https://github.com/juliehub/Terraform-Practice/blob/master/gcp_resource_dependencies.md)
+
+#### 5. Clean up
 ```python
 @terraform-ins1:~/terraform-docker-demo$ terraform destroy
 google_compute_network.vpc_network: Refreshing state... [id=projects/indigo-winter-286100/global/networks/terraform-network]
