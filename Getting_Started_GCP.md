@@ -10,3 +10,20 @@ Create a [simple intrastructure](https://github.com/juliehub/Terraform-Practice/
 
 #### 3. Change Infrastructure:
 Add a new compute instance. See the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/change_gcp.md)
+
+#### 4. Clean up
+```python
+@terraform-ins1:~/terraform-docker-demo$ terraform destroy
+google_compute_network.vpc_network: Refreshing state... [id=projects/indigo-winter-286100/global/networks/terraform-network]
+google_compute_instance.vm_instance: Refreshing state... [id=projects/indigo-winter-286100/zones/australia-southeast1-b/instances/terraform-instance]
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # google_compute_instance.vm_instance will be destroyed
+  - resource "google_compute_instance" "vm_instance" {
+      - can_ip_forward       = false -> null
+```
