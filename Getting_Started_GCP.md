@@ -26,4 +26,8 @@ Terraform will perform the following actions:
   # google_compute_instance.vm_instance will be destroyed
   - resource "google_compute_instance" "vm_instance" {
       - can_ip_forward       = false -> null
+    
+google_compute_network.vpc_network: Destruction complete after 49s
+
+Destroy complete! Resources: 2 destroyed.
 ```
