@@ -7,3 +7,6 @@ Follow installation [steps](https://github.com/juliehub/Terraform-Practice/blob/
 
 #### 2. Build Infrastructure:
 Create a [simple intrastructure](https://github.com/juliehub/Terraform-Practice/blob/master/build_infra_gcp.md)
+
+#### 3. Change Infrastructure:
+Add a new compute instance. See the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/change_gcp.md)
