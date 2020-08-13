@@ -13,8 +13,7 @@ provider "google" {
 
   project = "indigo-winter-286100"
   region  = "australia-southeast1"
-  zone    = "australia-southeast1-b	
-"
+  zone    = "australia-southeast1-b"
 }
 
 resource "google_compute_network" "vpc_network" {
