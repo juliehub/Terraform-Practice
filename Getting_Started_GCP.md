@@ -1,18 +1,18 @@
 #### Prerequisites:
-Create a [Google Cloud Platform account](https://console.cloud.google.com/freetrial/) and configure Billing Alert.
+Create a [Google Cloud Platform account.](https://console.cloud.google.com/freetrial/) and configure Billing Alert.
 
 #### 1. Installation:
 Create a compute VM instance running on Linux.
-Follow installation [steps](https://github.com/juliehub/Terraform-Practice/blob/master/terraform_installation_gcp.md)
+Follow installation [steps.](https://github.com/juliehub/Terraform-Practice/blob/master/terraform_installation_gcp.md)
 
 #### 2. Build Infrastructure:
-Create a [simple intrastructure](https://github.com/juliehub/Terraform-Practice/blob/master/build_infra_gcp.md)
+Create a [simple intrastructure.](https://github.com/juliehub/Terraform-Practice/blob/master/build_infra_gcp.md)
 
 #### 3. Change Infrastructure:
-Add a new compute instance. See the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/change_gcp.md)
+Add a new compute instance. See the [steps.](https://github.com/juliehub/Terraform-Practice/blob/master/change_gcp.md)
 
 #### 4. Create resource dependencies
-Create static IP and assign to new compute instance. [See the steps](https://github.com/juliehub/Terraform-Practice/blob/master/gcp_resource_dependencies.md)
+Create static IP and assign to new compute instance. See the [steps.](https://github.com/juliehub/Terraform-Practice/blob/master/gcp_resource_dependencies.md)
 
 #### 5. Clean up
 ```python
