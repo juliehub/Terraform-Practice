@@ -9,7 +9,7 @@ terraform {
 provider "google" {
   version = "3.5.0"
 
-  credentials = file("indigo-winter-286100-123456711d79.json")
+  credentials = file("MyFirstProject-123456789012.json")
 
   project = "indigo-winter-286100"
   region  = "australia-southeast1"
