@@ -12,6 +12,6 @@ Follow the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/Ge
 [References](https://learn.hashicorp.com/collections/terraform/gcp-get-started)
 
 ### 2. Organize Configuration With Modules
-Follow the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/modules.md)
+Follow the [steps](https://github.com/juliehub/Terraform-Practice/blob/master/modules.md) (to continue!)
 
 [References](https://learn.hashicorp.com/tutorials/terraform/module)
