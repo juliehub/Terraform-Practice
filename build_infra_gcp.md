@@ -65,3 +65,17 @@ google_compute_network.vpc_network: Creation complete after 49s [id=projects/ind
 
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
+#### 5. Inspect the current state
+```python
+@terraform-ins1:~/terraform-docker-demo$ terraform show
+# google_compute_network.vpc_network:
+resource "google_compute_network" "vpc_network" {
+    auto_create_subnetworks         = true
+    delete_default_routes_on_create = false
+    id                              = "projects/indigo-winter-286100/global/networks/terraform-network"
+    name                            = "terraform-network"
+    project                         = "indigo-winter-286100"
+    routing_mode                    = "REGIONAL"
+    self_link                       = "https://www.googleapis.com/compute/v1/projects/indigo-winter-286100/global/networks/terraform-network"
+}
+```
